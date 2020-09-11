@@ -1,0 +1,255 @@
+body{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-style:italic;
+    font-family: 'Courier New', Courier, monospace;
+    background: rgb(63,94,251);
+    background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(128,83,151,1) 57%, rgba(177,75,75,1) 100%);
+    
+}
+
+nav{
+    display: block;
+}
+nav ul{
+display: flex;
+justify-content: center;
+text-align: center;
+list-style-type: disc;
+list-style-position: inside;
+text-decoration: none;
+font-size: 24px;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.clock{
+    border-radius: 50%;
+    background: #fff url(Imagenes/ios_clock.svg) no-repeat center;
+    background-size: 88%;
+    height: 1em;
+    padding-bottom: 31%;
+    position: relative;
+    width: 20em;
+}
+
+.clock:after{
+    content: '';
+    background: #000000;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-10%, 50%);
+    width: 5%;
+    height: 5%;
+    bottom: 50%;
+
+}
+.minutes-container, .hours-container, .seconds-container{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.hours{
+    position: absolute;
+    background: #000;
+    height: 20%;
+    left: 51%;
+   
+    top: 30%;
+    transform-origin: 50% 100%;
+    width: 2.5%;
+  }
+.minutes{
+    position: absolute;
+    background: #000;
+    height: 50%;
+    left: 51.5%;
+   
+    top: 30%;
+    transform-origin: 50% 100%;
+    width: 1.5%;
+  }
+.seconds{
+    position: absolute;
+    background: red;
+    height: 50%;
+    left: 51%;
+   
+    top: 30%;
+    transform-origin: 50% 75%;
+    width: 0.5%;
+  }  
+.timeline{
+    position: relative;
+    margin: 50px auto;
+    padding: 40px;
+    width: 1000px;
+}
+.timeline::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: black;
+}
+.timeline ul{
+    margin: 0;
+    padding: 0;
+}
+.timeline ul li{
+    list-style: none;
+    line-height: normal;
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+.timeline ul li:nth-child(odd){
+    float: left;
+    text-align: left;
+    clear: both;
+}
+.timeline ul li:nth-child(even){
+    float: right;   
+    text-align: left;
+    clear: both;
+}
+.contenido{
+    padding-bottom: 20px;
+}
+.timeline ul li:nth-child(odd):before{
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: -6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(43, 4, 17);
+    box-shadow: 0 0 0 3px rgba(43, 4, 17, 0.3);
+}
+.timeline ul li:nth-child(even):before{
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(43, 4, 17);
+    box-shadow: 0 0 0 3px rgba(43, 4, 17, 0.3);
+}
+.timeline ul li h1{
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    color: chocolate;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.timeline ul li p{
+    margin: 10px 0 0;
+    padding: 0;
+}
+.timeline ul li:nth-child(odd) .time{
+    position: absolute;
+    top: 12px;
+    right: -165px;
+    margin: 0;
+    padding: 8px 16px;
+    background:  rgba(43, 4, 17);
+    color: cornsilk;
+    border-radius: 18px;
+    box-shadow: 0 0 0 3px  rgba(43, 4, 17,0.3);
+}
+.timeline ul li:nth-child(even) .time{
+    position: absolute;
+    top: 12px;
+    left: -165px;
+    margin: 0;
+    padding: 8px 16px;
+    background:  rgba(43, 4, 17);
+    color: cornsilk;
+    border-radius: 18px;
+    box-shadow: 0 0 0 3px  rgba(43, 4, 17,0.3);
+}
+.Premios{
+    margin: 0;
+    padding: 0;
+}
+.MTV, .Grammy{
+    margin: 5px;
+    padding: 10px 15px;
+    position: relative;
+    box-sizing: border-box;
+    border: solid 8px;
+    
+}
+.MTV #mtvimagen{
+    height: 150px;
+    width: 200px;
+}
+
+
+#grammyimagen{
+    height: 150px;
+    width: 200px;
+    position: relative;
+    right: -750px;
+}
+
+
+.cuadrado{
+    content: square;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    padding: 5px;
+    background: dimgrey;
+    border: solid black 10px;
+    z-index: +1;
+   
+}
+
+.cuadrado:hover{
+    animation-name: color,rotate;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes color{
+    0%{background-color: dimgrey }
+    25%{background-color: grey}
+    50%{background-color: darkgrey}
+    75%{background-color: lightslategray}
+    100%{background-color:black}
+}
+@keyframes rotate{
+    100%{transform: rotate(360deg)}
+}
+
+
+#footer{
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+/* Aca viene la clase de los videos de las demas paginas*/
+
+.videos{
+    margin: 5px;
+    padding: 5px;
+}
